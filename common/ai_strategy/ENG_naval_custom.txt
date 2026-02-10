@@ -1,16 +1,72 @@
-# In a new file common/ai_strategy/ENG_naval_custom.txt
-ENG_force_channel_patrol = {
-	type = naval_region_focus
-	id = 26 # The English Channel region ID
-	value = 5000 # High weight makes them prioritize this over the Atlantic
-	enable = {
+ENG_patrol_zones = {
+	allowed = {
 		tag = ENG
-		has_war = yes
+	}
+	# Tells the AI to value these regions for patrols
+	ai_strategy = {
+		type = naval_region_priority
+		id = 26 # North Sea
+		value = 1000
+	}
+	ai_strategy = {
+		type = naval_region_priority
+		id = 24 # Norwegian Coast
+		value = 1000
+	}
+	ai_strategy = {
+		type = naval_region_priority
+		id = 27 # English Channel
+		value = 1000
 	}
 }
 
-ENG_keep_patrolling = {
-	type = ai_deployment_convoys
-	id = 26
-	value = 100
+ENG_force_strike_force = {
+	allowed = {
+		tag = ENG
+	}
+	enable_task_force_composition = ENG_StrikeForce_1 # Forces the AI to use your template
+	abort_when_not_at_war = no
+	
+	ai_strategy = {
+		type = naval_mission_config
+		id = mission_strike_force
+		value = 200 # Makes them prioritize Strike Force mission
+	}
+
+	ai_strategy = {
+		type = naval_region_priority
+		id = 1 # English Channel
+		value = 500
+	}
+}
+ENG_deathstack_priority = {
+    allowed = {
+        tag = ENG
+    }
+    
+    # 1. Force the AI to actually use the template you made
+    ai_strategy = {
+        type = enable_task_force_composition
+        id = ENG_StrikeForce_1
+        value = 1
+    }
+
+    # 2. Force the AI to prioritize the Strike Force mission type
+    ai_strategy = {
+        type = naval_mission_config
+        id = mission_strike_force
+        value = 200
+    }
+
+    # 3. Force the AI to value the sea zones around Scapa Flow
+    ai_strategy = {
+        type = naval_region_priority
+        id = 26 # North Sea
+        value = 500
+    }
+    ai_strategy = {
+        type = naval_region_priority
+        id = 24 # Norwegian Coast
+        value = 500
+    }
 }
