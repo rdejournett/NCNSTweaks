@@ -1,0 +1,22 @@
+ideas = {
+	country = {
+		ENG_naval_intelligence_superiority = {
+			allow = { tag = ENG }
+			
+			picture = generic_navy_bonus
+			
+			modifier = {
+				# Increases how quickly your patrols "find" the enemy
+				naval_spotting_chance_mult = 0.25 
+				# Helps the Strike Force get to the battle faster once spotted
+				naval_strike_force_speed_mult = 0.10
+				# Historical flavor: slightly better coordination
+				naval_coordination_stats_mult = 0.15
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

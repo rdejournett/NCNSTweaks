@@ -1,0 +1,11 @@
+﻿# DECISION CATEGORY LOCALIZATION
+ my_custom_decision_category:0 "National Improvement"
+ my_custom_decision_category_desc:0 "Decisions focusing on internal development and national stability."
+ 
+ # DECISION LOCALIZATION
+ my_unique_decision_id:0 "Boost National Morale"
+ my_unique_decision_id_desc:0 "Spend some political capital to host national rallies, providing a temporary boost to the nation's morale and stability."
+ l_english:
+ ENG_naval_intelligence_superiority:0 "Naval Intelligence Superiority"
+ ENG_naval_intelligence_superiority_desc:0 "Building on the legacy of Room 40 and advanced maritime coordination, the Royal Navy maintains a superior ability to track, intercept, and engage hostile surface elements across the globe."
+ 

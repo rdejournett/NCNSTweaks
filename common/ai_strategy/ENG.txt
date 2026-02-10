@@ -1,0 +1,19 @@
+# AI Research Weights for the UK
+ENG_naval_research_focus = {
+	type = ai_strategy_research_mod
+	id = tech_naval_recon # This includes Seaplanes and Radar modules
+	value = 500
+	enable = {
+		tag = ENG
+		date < 1941.1.1
+	}
+}
+
+ENG_radar_priority = {
+	type = ai_strategy_research_mod
+	id = tech_radar # Focuses on the Electronics branch
+	value = 300
+	enable = {
+		tag = ENG
+	}
+}

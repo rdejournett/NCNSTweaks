@@ -1,0 +1,20 @@
+on_actions = {
+    on_daily_navy = {
+        effect = {
+            if = {
+                limit = { tag = ENG }
+                every_unit_leader = {
+                    every_fleet_unit = {
+                        every_task_force = {
+                            limit = {
+                                has_naval_mission = patrol
+                            }
+                            # This forces the "Do Not Engage" button to be active
+                            set_naval_engagement_rule = do_not_engage
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

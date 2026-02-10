@@ -1,0 +1,16 @@
+# In a new file common/ai_strategy/ENG_naval_custom.txt
+ENG_force_channel_patrol = {
+	type = naval_region_focus
+	id = 26 # The English Channel region ID
+	value = 5000 # High weight makes them prioritize this over the Atlantic
+	enable = {
+		tag = ENG
+		has_war = yes
+	}
+}
+
+ENG_keep_patrolling = {
+	type = ai_deployment_convoys
+	id = 26
+	value = 100
+}
