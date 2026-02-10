@@ -1,0 +1,28 @@
+ENG_clear_naval_priorities = {
+	allowed = {
+		tag = ENG
+	}
+	
+	# This multiplier scales the AI's "natural" desire for these missions.
+	# Setting it to 0.0 effectively "mutes" the AI's autonomy for these tasks.
+	ai_strategy = {
+		type = naval_mission_config
+		id = mission_patrol
+		value = -100  # A massive negative offset to zero out the base
+	}
+	ai_strategy = {
+		type = naval_mission_config
+		id = mission_strike_force
+		value = -100
+	}
+	ai_strategy = {
+		type = naval_mission_config
+		id = mission_patrol
+		value = -100
+	}	
+	ai_strategy = {
+		type = naval_mission_config
+		id = mission_convoy_raiding
+		value = -100
+	}
+}

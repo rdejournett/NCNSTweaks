@@ -1,0 +1,34 @@
+ENG_dominance_fleet_1 = {
+	required_taskforces = {
+		ENG_StrikeForce_1 = 1
+		ENG_PatrolDominanceForce_CA_1 = 2
+	}	
+	optional_taskforces = {
+		ENG_StrikeForce_1 = 1
+		ENG_PatrolDominanceForce_CA_1 = 2
+	}
+}
+
+ENG_raiding_fleet_2 = {
+	required_taskforces = {
+		ENG_ConvoyRaiding_1 = 1
+	}	
+	optional_taskforces = {
+		ENG_ConvoyRaiding_1 = 10
+	}
+}
+
+ENG_escort_fleet_3 = {
+	required_taskforces = {
+		ENG_ConvoyEscort_1 = 2
+	}
+	optional_taskforces = {
+		ENG_ConvoyEscort_1 = 2
+	}
+}
+
+ENG_minelaying_fleet_4 = {
+	required_taskforces = {
+		ENG_MineLaying_1 = 1
+	}
+}

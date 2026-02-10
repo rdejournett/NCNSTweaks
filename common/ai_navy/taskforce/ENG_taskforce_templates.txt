@@ -4,7 +4,7 @@ ENG_StrikeForce_1 = {
 		original_tag = ENG 
 	}
 	ai_will_do = {
-		factor = 2
+		factor = 5
 	}	
 	mission = { naval_strike }
 	min_composition = {
@@ -13,7 +13,6 @@ ENG_StrikeForce_1 = {
 		}
 	}
 
-	target_amount = { factor = 3 } # Base factor of 2 creates two task forces
 	
 	optimal_composition = {
 		carrier = {
@@ -26,10 +25,10 @@ ENG_StrikeForce_1 = {
 			amount = 4
 		}
 		light_cruiser = {
-			amount = 4
+			amount = 100
 		}
 		destroyer = {
-			amount = 28
+			amount = 100
 
 		}
 	}
@@ -43,7 +42,6 @@ ENG_PatrolDominanceForce_CA_1 = {
 		factor = 5
 	}	
 	mission = { naval_patrol }
-	target_amount = { factor = 4 } # Base factor of 2 creates two task forces
 	min_composition = {
 		destroyer = {
 			amount = 4
@@ -69,7 +67,6 @@ ENG_ConvoyRaiding_1 = {
 		factor = 2
 	}	
 	mission = { convoy_raiding }
-	target_amount = { factor = 4 } # Base factor of 2 creates two task forces
 	min_composition = {
 		submarine = {
 			amount = 4
@@ -87,7 +84,6 @@ ENG_ConvoyEscort_1 = {
 	allowed = {
 		original_tag = ENG
 	}
-	target_amount = { factor = 4 } # Base factor of 2 creates two task forces
 	ai_will_do = {
 		factor = 5
 	}	
@@ -109,7 +105,6 @@ ENG_MineLaying_1 = {
 	allowed = {
 		original_tag = ENG
 	}
-	target_amount = { factor = 1 } # Base factor of 2 creates two task forces
 	ai_will_do = {
 		factor = 2
 	}
