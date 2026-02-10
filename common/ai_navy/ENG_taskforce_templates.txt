@@ -1,67 +1,35 @@
-ENG_StrikeForce_1 = {
-	allowed = {
-		original_tag = ENG 
-	}
-	ai_will_do = {
-		factor = 1
-	}	
-	mission = { naval_strike }
-	min_composition = {
-		destroyer = {
-			amount = 4
-		}
-	}
-	
-	optimal_composition = {
-		carrier = {
-			amount = 2
-		}
-		battleship = {
-			amount = 4
-		}
-		heavy_cruiser = {
-			amount = 4
-		}
-		light_cruiser = {
-			amount = 4
-		}
-		destroyer = {
-			amount = 10
-
-		}
-	}
-}
-
-ENG_PatrolReconForce_1 = {
+# The "Grand Fleet" Deathstack
+ENG_Main_Strike_Force = {
 	allowed = { original_tag = ENG }
-	ai_will_do = { factor = 10 } # Increased priority
-	mission = { naval_patrol }
+	ai_will_do = { factor = 200 } # Highest priority
+	mission = { naval_strike_force }
+	
+	# The AI will start this fleet with any 1 ship and keep adding until it hits these massive numbers
 	min_composition = {
-		destroyer = { amount = 1 } # Only needs 1 DD to start
-	}	
+		any = { amount = 1 }
+	}
 	optimal_composition = {
-		destroyer = { amount = 2 } 
-		light_cruiser = { amount = 1 } # LC is a bonus, not a requirement
+		carrier = { amount = 4 }      # 4 is the "no penalty" max
+		battleship = { amount = 15 }   # Force all BBs here
+		battle_cruiser = { amount = 10 }
+		heavy_cruiser = { amount = 15 }
+		light_cruiser = { amount = 20 }
+		destroyer = { amount = 80 }    # High screen count to protect the "Deathstack"
 	}
 }
-
-ENG_PatrolDominanceForce_BC_1 = {
-	allowed = {
-		original_tag = ENG
-	}
-	ai_will_do = {
-		factor = 5
-	}	
+# Upgraded Patrol Groups
+ENG_Heavy_Patrol_Force = {
+	allowed = { original_tag = ENG }
+	ai_will_do = { factor = 150 }
 	mission = { naval_patrol }
-		destroyer = { amount = 1 } # Only needs 1 DD to start	}
+	
+	# These will actually be able to fight back against small enemy groups
+	min_composition = {
+		light_cruiser = { amount = 1 }
+	}
 	optimal_composition = {
-		battle_cruiser = {
-			amount = 3
-		}
-		destroyer = {
-			amount = 12
-
-		}
+		light_cruiser = { amount = 2 } # Your spotting cruisers
+		destroyer = { amount = 10 }     # Meat shields for the cruisers
 	}
 }
 
@@ -135,3 +103,4 @@ ENG_MineLaying_1 = {
 		}
 	}
 }
+
