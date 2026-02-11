@@ -1,7 +1,7 @@
 
-ENG_StrikeForce_1 = {
+ITA_StrikeForce_1 = {
 	allowed = {
-		original_tag = ENG
+		original_tag = ITA 
 	}
 	ai_will_do = {
 		factor = 5
@@ -25,27 +25,29 @@ ENG_StrikeForce_1 = {
 			amount = 4
 		}
 		light_cruiser = {
-			amount = 10
-			role = 1
+			amount = 100
 		}
 		destroyer = {
-			amount = 50
+			amount = 100
 
 		}
 	}
 }
 
-ENG_PatrolDominanceForce_CA_1 = {
+ITA_PatrolDominanceForce_CA_1 = {
 	allowed = {
-		original_tag = ENG
+		original_tag = ITA
 	}
 	priority_over_default = yes
 	ai_will_do = {
-        factor = 6  # Base priority
+        factor = 5  # Base priority
         modifier = {
             factor = 20 # Increases priority to 100 if at war
             has_war = yes
-        }		
+        }
+		modifier = {
+            factor = 2 # Boost priority if the enemy is actually a threat            
+        }
     }	
 	mission = { naval_patrol }
 	min_composition = {
@@ -65,9 +67,9 @@ ENG_PatrolDominanceForce_CA_1 = {
 }
 
 
-ENG_ConvoyRaiding_1 = {
+ITA_ConvoyRaiding_1 = {
 	allowed = {
-		original_tag = ENG
+		original_tag = ITA
 	}
 	ai_will_do = {
 		factor = 2
@@ -86,9 +88,9 @@ ENG_ConvoyRaiding_1 = {
 	}
 }
 
-ENG_ConvoyEscort_1 = {
+ITA_ConvoyEscort_1 = {
 	allowed = {
-		original_tag = ENG
+		original_tag = ITA
 	}
 	ai_will_do = {
 		factor = 5
@@ -107,45 +109,33 @@ ENG_ConvoyEscort_1 = {
 	}
 }
 
-
-ENG_MineLaying_1 = {
+ITA_MineLaying_1 = {
 	allowed = {
-		original_tag = ENG
+		original_tag = ITA
 	}
-	# THE FIX: Set factor to 0 so the AI ignores this template entirely
 	ai_will_do = {
-		factor = 0 
+		factor = 2
 	}
-	
 	mission = { mines_planting }
-	
-	# Keep the rest as is, or delete the contents; 
-	# as long as factor is 0, it's dead.
 	min_composition = {
-		destroyer = { amount = 2 role = 4 }
-	}
-}
-
-
-ENG_ConvoySurfaceRaiding_1 = {
-	allowed = {
-		original_tag = ENG
-	}
-	ai_will_do = {
-		factor = 0
-	}	
-	mission = { convoy_raiding }
-	min_composition = {
-		battle_cruiser = {
-			amount = 1
-		}
-	}
-
-	optimal_composition = {
-		battle_cruiser = {
+		destroyer = {
 			amount = 2
+			role = 4
+		}
+	}
+	
+	optimal_composition = {
+		destroyer = {
+			amount = 4
+			role = 4
+		}
+		
+		light_cruiser = {
+			amount = 1
+			role = 4
 		}
 	}
 }
+
 
 
