@@ -1,34 +1,3 @@
-# AI Research Weights for the UK
-ENG_naval_research_focus = {
-	allowed = {
-		original_tag = ENG
-		has_dlc = "Man the Guns"
-	}
-	enable = {
-		date < 1938.1.1
-	}
-	abort = {
-		always = no
-	}
-	# THE FIX: Nested inside ai_strategy block
-	ai_strategy = {
-		type = research_weight_factor
-		id = sonar # Correct ID for naval sonar/detection tech
-		value = 500
-	}
-		ai_strategy = {
-		type = research_weight_factor
-		id = improved_sonar # Correct ID for naval sonar/detection tech
-		value = 500
-	}
-		ai_strategy = {
-		type = research_weight_factor
-		id = advanced_sonar # Correct ID for naval sonar/detection tech
-		value = 500
-	}
-	
-}
-
 
 
 ENG_change_ship_priority = {
@@ -72,13 +41,13 @@ ENG_change_ship_priority = {
 	ai_strategy = {
         type = equipment_production_factor
         id = screen_ship # Internal ID from script_enums
-        value = 500   # +500% dockyard priority
+        value = 100   # +500% dockyard priority
     }
 	
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 500
+		value = 100
 	}
 	# 2. Map the hulls specifically to those roles (Fixes "No Matching Role")
 	
@@ -115,9 +84,8 @@ ENG_stop_mining_production = {
 # improve DD research tech
 
 
-
-ENG_improve_DD_upgrade = {
-    allowed = { tag = ENG }
+GER_improve_sub_upgrade = {
+    allowed = { tag = GER }
     enable = { always = yes }
     abort = { always = no }
 
@@ -131,52 +99,23 @@ ENG_improve_DD_upgrade = {
 	# Tells the AI to prioritize "upgrading" existing lines to the newest tech
 	ai_strategy = {
 		type = equipment_variant_production_factor
-		id = destroyer
+		id = ship_hull_submarine_2 # submarine_equipment
 		value = 200
 	}
 }
 
 
-# boost the med
 
-ENG_develop_mediterranean_supremacy = {
+
+GER_build_convoys = {
 	allowed = {
-		original_tag = ENG
+		original_tag = GER
 	}
 	
 	enable = {
 		OR = {
-			has_war_with = ITA
-			has_war_with = SOU
-		}
-		date > 1940.1.1
-	}
-	
-	abort_when_not_enabled = yes
-	
-	ai_strategy = {
-		type = naval_dominance
-		id = western_med_control_zone
-		value = 500
-	}
-	
-	ai_strategy = {
-		type = naval_dominance
-		id = eastern_med_control_zone
-		value = 500
-	}
-}
-
-
-ENG_build_convoys = {
-	allowed = {
-		original_tag = ENG
-	}
-	
-	enable = {
-		OR = {
-			has_war_with = ITA
-			has_war_with = GER
+			has_war_with = ENG
+			has_war_with = USA
 		}
 		date > 1940.1.1
 	}

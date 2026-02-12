@@ -215,6 +215,27 @@ ITA_exercise_early = {
 	
 }
 
+ITA_build_convoys = {
+	allowed = {
+		original_tag = ITA
+	}
+	
+	enable = {
+		OR = {
+			has_war_with = ENG
+		}
+		date > 1940.1.1
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = convoy
+		value = 1
+	}
+}
+
 
 # these are the possibilities
 
