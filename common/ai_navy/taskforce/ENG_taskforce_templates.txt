@@ -30,6 +30,7 @@ ENG_StrikeForce_1 = {
 		}
 		destroyer = {
 			amount = 50
+			role = 1  # Matches icon_index 1
 
 		}
 	}
@@ -51,14 +52,17 @@ ENG_PatrolDominanceForce_CA_1 = {
 	min_composition = {
 		destroyer = {
 			amount = 4
+			role = 1  # Matches icon_index 1
 		}
 	}
 	optimal_composition = {
 		heavy_cruiser = {
 			amount = 3
+			role = 1  # Matches icon_index 1
 		}
 		destroyer = {
 			amount = 12
+			role = 1  # Matches icon_index 1
 
 		}
 	}
@@ -97,12 +101,14 @@ ENG_ConvoyEscort_1 = {
 	min_composition = {
 		destroyer = {
 			amount = 5
+			role = 1  # Matches icon_index 1
 		}
 	}
 	
 	optimal_composition = {
 		destroyer = {
 			amount = 10
+			role = 1  # Matches icon_index 1
 		}
 	}
 }

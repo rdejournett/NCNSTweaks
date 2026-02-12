@@ -1,7 +1,7 @@
 # AI Research Weights for the UK
-ENG_naval_research_focus = {
+ITA_naval_research_focus = {
 	allowed = {
-		original_tag = ENG
+		original_tag = ITA
 		has_dlc = "Man the Guns"
 	}
 	enable = {
@@ -31,7 +31,7 @@ ENG_naval_research_focus = {
 
 
 
-ENG_change_ship_priority = {
+ITA_change_ship_priority = {
 
 	# Fixes the 'missing enable' error
 	enable = {
@@ -65,20 +65,20 @@ ENG_change_ship_priority = {
     }
 	ai_strategy = {
 		type = role_ratio
-		id = naval_sub
-		value = 500
+		id = naval_submarine
+		value = 1000
 	}
 	# force creations of DD
 	ai_strategy = {
         type = equipment_production_factor
         id = screen_ship # Internal ID from script_enums
-        value = 500   # +500% dockyard priority
+        value = 50   # +500% dockyard priority
     }
 	
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 500
+		value = 50
 	}
 	# 2. Map the hulls specifically to those roles (Fixes "No Matching Role")
 	
@@ -93,8 +93,8 @@ ENG_change_ship_priority = {
 
 #disable miner production
 
-ENG_stop_mining_production = {
-    allowed = { tag = ENG }
+ITA_stop_mining_production = {
+    allowed = { tag = ITA }
     enable = { always = yes }
     abort = { always = no }
 
@@ -116,8 +116,8 @@ ENG_stop_mining_production = {
 
 
 
-ENG_improve_DD_upgrade = {
-    allowed = { tag = ENG }
+ITA_improve_DD_upgrade = {
+    allowed = { tag = ITA }
     enable = { always = yes }
     abort = { always = no }
 
@@ -136,18 +136,48 @@ ENG_improve_DD_upgrade = {
 	}
 }
 
+#boost chance of strike force engagement
+
+ITA_aggressive_strike_force = {
+	allowed = { tag = ITA }
+	enable = { always = yes }
+	abort = { always = no }
+
+	# Makes the AI ignore danger. 
+	# A negative value means it will sortie even when heavily outmatched.
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_STRIKE_FORCE
+		value = -0.8
+	}
+
+	
+}
+
+# set home bases hopefully
+ITA_med_home_base = {
+    allowed = { tag = ITA }
+	enable = { controls_province = 7059 } # Sicily
+	abort = { always = no }
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 169      # Strategic reagion id (west coast of italy)
+		value = 1000   # The weight/importance of using this base
+	}
+}
+
 
 # boost the med
 
-ENG_develop_mediterranean_supremacy = {
+ITA_develop_mediterranean_supremacy = {
 	allowed = {
-		original_tag = ENG
+		original_tag = ITA
 	}
 	
 	enable = {
 		OR = {
-			has_war_with = ITA
-			has_war_with = SOU
+			has_war_with = ENG
+			has_war_with = USA
 		}
 		date > 1940.1.1
 	}
@@ -167,3 +197,34 @@ ENG_develop_mediterranean_supremacy = {
 	}
 }
 
+
+ITA_exercise_early = {
+	allowed = { tag = ITA }
+	enable = { 
+		has_war = no 
+		date < 1939.1.1
+	}
+	abort_when_not_enabled = yes
+	# Tells the AI that the 'Danger' of running out of fuel 
+	# or equipment during training is acceptable.
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_TRAINING
+		value = -1.0
+	}
+	
+}
+
+
+# these are the possibilities
+
+
+#
+#- `naval_avoid_region`
+#- `naval_convoy_raid_region`
+#- `naval_invasion_focus`
+#- `naval_invasion_dominance_weight`
+#- `naval_mission_threshold`
+#- `strike_force_home_base`
+#- `naval_dominance`
+#- `convoy_raiding_target`

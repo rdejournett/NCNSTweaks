@@ -3,4 +3,6 @@ tags={
 	"Gameplay"
 }
 name="NCNS Naval Tweaks"
-supported_version="1.17.3.0"
+picture="thumbnail.png"
+supported_version="1.17.*"
+remote_file_id="3664869508"

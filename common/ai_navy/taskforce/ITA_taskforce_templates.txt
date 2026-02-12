@@ -1,7 +1,7 @@
 
 ITA_StrikeForce_1 = {
 	allowed = {
-		original_tag = ITA 
+		original_tag = ITA
 	}
 	ai_will_do = {
 		factor = 5
@@ -15,20 +15,21 @@ ITA_StrikeForce_1 = {
 
 	
 	optimal_composition = {
-		carrier = {
-			amount = 4
-		}
 		battleship = {
-			amount = 8
+			amount = 4
+			role = 1  # Matches icon_index 1
 		}
 		heavy_cruiser = {
-			amount = 4
+			amount = 8
+			role = 1  # Matches icon_index 1
 		}
 		light_cruiser = {
-			amount = 100
+			amount = 10
+			role = 1
 		}
 		destroyer = {
-			amount = 100
+			amount = 50
+			role = 1  # Matches icon_index 1
 
 		}
 	}
@@ -40,27 +41,31 @@ ITA_PatrolDominanceForce_CA_1 = {
 	}
 	priority_over_default = yes
 	ai_will_do = {
-        factor = 5  # Base priority
+        factor = 6  # Base priority
         modifier = {
             factor = 20 # Increases priority to 100 if at war
             has_war = yes
-        }
-		modifier = {
-            factor = 2 # Boost priority if the enemy is actually a threat            
-        }
+        }		
     }	
 	mission = { naval_patrol }
 	min_composition = {
 		destroyer = {
 			amount = 4
+			role = 1  # Matches icon_index 1
 		}
 	}
 	optimal_composition = {
-		heavy_cruiser = {
+		light_cruiser = {
 			amount = 3
+			role = 1  # Matches icon_index 1
 		}
+		light_cruiser = {
+			amount = 1
+			role = 2  # spotting
+		}		
 		destroyer = {
 			amount = 12
+			role = 1  # Matches icon_index 1
 
 		}
 	}
@@ -99,43 +104,57 @@ ITA_ConvoyEscort_1 = {
 	min_composition = {
 		destroyer = {
 			amount = 5
+			role = 1  # Matches icon_index 1
 		}
 	}
 	
 	optimal_composition = {
 		destroyer = {
 			amount = 10
+			role = 1  # Matches icon_index 1
 		}
 	}
 }
+
 
 ITA_MineLaying_1 = {
 	allowed = {
 		original_tag = ITA
 	}
+	# THE FIX: Set factor to 0 so the AI ignores this template entirely
 	ai_will_do = {
-		factor = 2
-	}
-	mission = { mines_planting }
-	min_composition = {
-		destroyer = {
-			amount = 2
-			role = 4
-		}
+		factor = 0 
 	}
 	
-	optimal_composition = {
-		destroyer = {
-			amount = 4
-			role = 4
-		}
-		
-		light_cruiser = {
-			amount = 1
-			role = 4
-		}
+	mission = { mines_planting }
+	
+	# Keep the rest as is, or delete the contents; 
+	# as long as factor is 0, it's dead.
+	min_composition = {
+		destroyer = { amount = 2 role = 4 }
 	}
 }
 
+
+ITA_ConvoySurfaceRaiding_1 = {
+	allowed = {
+		original_tag = ITA
+	}
+	ai_will_do = {
+		factor = 0
+	}	
+	mission = { convoy_raiding }
+	min_composition = {
+		battle_cruiser = {
+			amount = 1
+		}
+	}
+
+	optimal_composition = {
+		battle_cruiser = {
+			amount = 2
+		}
+	}
+}
 
 

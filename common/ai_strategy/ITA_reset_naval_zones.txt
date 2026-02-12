@@ -1,0 +1,87 @@
+ITA_clear_naval_priorities = {
+	allowed = {
+		tag = ITA
+	}
+	# Fixes the 'missing enable' error
+	enable = {
+		always = yes
+	}
+
+	# Fixes the 'missing abort' error
+	abort = {
+		always = no
+	}
+	# This multiplier scales the AI's "natural" desire for these missions.
+	# Setting it to 0.0 effectively "mutes" the AI's autonomy for these tasks.
+
+	ai_strategy = {
+	    type = naval_mission_threshold
+	    id = MISSION_PATROL
+	    value = -100
+	}	
+}
+
+
+
+ITA_promote_home_naval_zones = {
+	allowed = {
+		tag = ITA
+	}
+	
+	enable = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes
+	
+	# High Priority for Home Waters
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 69 # East med
+		value = 1000
+	}
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 29 # central med
+		value = 1000
+	}
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 169 # west coast of Italy
+		value = 1000
+	}
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 68 # west coast of Italy
+		value = 1000
+	}
+	ai_strategy = {
+    	type = strike_force_home_base
+    	id = 169
+    	value = 1000
+	}
+	ai_strategy = {
+        type = naval_avoid_region
+        id = 69
+        value = 0   # 0 means "Do not avoid this at all"
+    }
+	ai_strategy = {
+        type = naval_avoid_region
+        id = 29
+        value = 0   # 0 means "Do not avoid this at all"
+    }
+	ai_strategy = {
+        type = naval_avoid_region
+        id = 169
+        value = 0   # 0 means "Do not avoid this at all"
+    }
+	ai_strategy = {
+        type = naval_avoid_region
+        id = 68
+        value = 0   # 0 means "Do not avoid this at all"
+    }
+	
+	
+	
+
+
+}

@@ -30,7 +30,7 @@ ENG_destroyers = {
 		enable = {
 			not = { has_tech = basic_ship_hull_light }
 		}
-		role_icon_index = 2
+		role_icon_index = 1
 
 		design_team = ENG_yarrow_shipbuilders_organization
 		
@@ -74,7 +74,7 @@ ENG_destroyers = {
 		enable = {
 			not = { has_tech = basic_ship_hull_light }
 		}
-		role_icon_index = 2
+		role_icon_index = 1
 
 		design_team = ENG_yarrow_shipbuilders_organization
 		
@@ -121,7 +121,7 @@ ENG_destroyers = {
 			}
 		}
 		enable = { not = { has_tech = improved_ship_hull_light } }
-		role_icon_index = 2
+		role_icon_index = 1
 
 		history = yes
 		target_variant = {
@@ -162,7 +162,7 @@ ENG_destroyers = {
 			}
 		}
 		enable = { not = { has_tech = improved_ship_hull_light } }
-		role_icon_index = 2
+		role_icon_index = 1
 		
 		history = yes
 		target_variant = {
@@ -207,7 +207,7 @@ ENG_destroyers = {
 			}
 		}
 
-		role_icon_index = 2
+		role_icon_index = 1
 		
 		history = yes
 		target_variant = {
@@ -215,15 +215,15 @@ ENG_destroyers = {
 			
 			type = ship_hull_light_3
 			modules = {
-				fixed_ship_battery_slot = dp_light_battery_2
+				fixed_ship_battery_slot = dp_light_battery_3
 				fixed_ship_anti_air_slot = ship_anti_air
-				fixed_ship_fire_control_system_slot = ship_sonar
+				fixed_ship_fire_control_system_slot = ship_sonar_3
 				fixed_ship_radar_slot = ship_radar
 				fixed_ship_engine_slot = light_ship_engine_2
-				fixed_ship_torpedo_slot = ship_torpedo
-				front_1_custom_slot = ship_depth_charge
+				fixed_ship_torpedo_slot = ship_torpedo_3
+				front_1_custom_slot = ship_depth_charge_3
 				mid_1_custom_slot = ship_anti_air
-				rear_1_custom_slot = ship_depth_charge
+				rear_1_custom_slot = ship_depth_charge_3
 			}
 		}
 		
@@ -248,7 +248,7 @@ ENG_destroyers = {
 			}
 		}
 
-		role_icon_index = 2
+		role_icon_index = 1
 		enable = { 
 			has_tech = advanced_dp_light_battery
 			not = { has_tech = advanced_ship_hull_light }
@@ -262,12 +262,12 @@ ENG_destroyers = {
 				fixed_ship_battery_slot = dp_light_battery_3
 				fixed_ship_anti_air_slot = ship_anti_air
 				fixed_ship_fire_control_system_slot = ship_radar
-				fixed_ship_radar_slot = ship_sonar
+				fixed_ship_radar_slot = ship_sonar_3
 				fixed_ship_engine_slot = light_ship_engine_2
-				fixed_ship_torpedo_slot = ship_torpedo
-				front_1_custom_slot = ship_depth_charge
+				fixed_ship_torpedo_slot = ship_torpedo_3
+				front_1_custom_slot = ship_depth_charge_3
 				mid_1_custom_slot = ship_anti_air
-				rear_1_custom_slot = ship_depth_charge
+				rear_1_custom_slot = ship_depth_charge_3
 			}
 		}
 		
@@ -294,7 +294,7 @@ ENG_destroyers = {
 		enable = {
 			has_tech = advanced_dp_light_battery
 		}
-		role_icon_index = 2
+		role_icon_index = 1
 		
 		history = yes
 		target_variant = {
@@ -307,10 +307,10 @@ ENG_destroyers = {
 				fixed_ship_fire_control_system_slot = ship_radar
 				fixed_ship_radar_slot = ship_sonar_2
 				fixed_ship_engine_slot = light_ship_engine_3
-				fixed_ship_torpedo_slot = ship_torpedo
+				fixed_ship_torpedo_slot = ship_torpedo_3
 				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot = ship_anti_air
-				mid_2_custom_slot = ship_depth_charge
+				mid_2_custom_slot = ship_depth_charge_3
 				rear_1_custom_slot = dp_light_battery_3
 			}
 		}
@@ -363,7 +363,7 @@ ENG_escorts = {
 			}
 		}
 
-		role_icon_index = 2
+		role_icon_index = 1
 		
 		history = yes
 		target_variant = {
@@ -409,7 +409,7 @@ ENG_escorts = {
 				has_tech = cavity_magnatron
 			}
 		}
-		role_icon_index = 2
+		role_icon_index = 1
 		
 		history = yes
 		target_variant = {
@@ -418,13 +418,13 @@ ENG_escorts = {
 			type = ship_hull_light_2
 			modules = {
 				fixed_ship_battery_slot = dp_light_battery_1
-				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_anti_air_slot = ship_anti_air
 				fixed_ship_fire_control_system_slot = ship_radar
-				fixed_ship_radar_slot = ship_sonar
+				fixed_ship_radar_slot = ship_sonar_2
 				fixed_ship_engine_slot = light_ship_engine_1
 				fixed_ship_torpedo_slot = empty
-				mid_1_custom_slot = ship_depth_charge
-				rear_1_custom_slot = ship_depth_charge
+				mid_1_custom_slot = ship_depth_charge_2
+				rear_1_custom_slot = ship_depth_charge_2
 			}
 		}
 		
@@ -462,7 +462,7 @@ ENG_naval_light_cruiser = {
 			factor = 1
 		}
 
-		role_icon_index = 2
+		role_icon_index = 1
 		
 		history = yes
 		target_variant = {
@@ -505,7 +505,7 @@ ENG_naval_light_cruiser = {
 			}
 		}
 		
-		role_icon_index = 2
+		role_icon_index = 1
 
 		history = yes
 		target_variant = {
@@ -547,7 +547,7 @@ ENG_naval_light_cruiser = {
 				has_war = yes
 			}
 		}
-		role_icon_index = 2
+		role_icon_index = 1
 
 		enable = {
 			has_tech = advanced_dp_light_battery
@@ -588,7 +588,7 @@ ENG_naval_light_cruiser = {
 		priority = {
 			factor = 200
 		}
-		role_icon_index = 2
+		role_icon_index = 1
 		enable = {
 			not = { has_tech = improved_ship_hull_cruiser }
 		}
@@ -638,7 +638,7 @@ ENG_naval_light_cruiser = {
 		enable = {
 			not = { has_tech = improved_ship_hull_cruiser }
 		}
-		role_icon_index = 2
+		role_icon_index = 1
 		
 		history = yes
 		target_variant = {
@@ -678,7 +678,7 @@ ENG_naval_light_cruiser = {
 		priority = {
 			factor = 450
 		}
-		role_icon_index = 2
+		role_icon_index = 1
 		
 		enable = {
 			not = { has_tech = advanced_ship_hull_cruiser }
@@ -721,7 +721,7 @@ ENG_naval_light_cruiser = {
 		priority = {
 			factor = 500
 		}
-		role_icon_index = 2
+		role_icon_index = 1
 		
 		enable = {
 			not = { has_tech = advanced_ship_hull_cruiser }
@@ -767,7 +767,7 @@ ENG_naval_light_cruiser = {
 				factor = 10
 			}
 		}
-		role_icon_index = 2
+		role_icon_index = 1
 		enable = {
 			not = { has_tech = advanced_ship_hull_cruiser }
 		}
@@ -810,7 +810,7 @@ ENG_naval_light_cruiser = {
 		priority = {
 			factor = 250
 		}
-		role_icon_index = 2
+		role_icon_index = 1
 		
 		history = yes
 		target_variant = {
@@ -883,7 +883,7 @@ ENG_naval_light_AA_cruiser = {
 			}
 		}
 		
-		role_icon_index = 2
+		role_icon_index = 1
 
 		enable = {
 			has_tech = advanced_dp_light_battery
@@ -2560,7 +2560,7 @@ ENG_spotting_cruiser = {
 			factor = 1
 		}
 
-		role_icon_index = 2
+		role_icon_index = 1
 		
 		history = no
 		target_variant = {
@@ -2595,3 +2595,66 @@ ENG_spotting_cruiser = {
 	}
 }
 
+
+ENG_naval_light_cruiser_shread = {
+	category = naval
+	
+	blocked_for = {
+	}
+	
+	available_for = {
+		ENG
+	}
+	
+	roles = {
+		naval_cruiser_light
+	}
+	
+	priority = {
+		factor = 2000
+	}
+	
+	cruiser_light_basic_shread = {
+		name = town_class
+		priority = {
+			factor = 2000
+		}
+		role_icon_index = 1
+		enable = {
+			not = { has_tech = improved_ship_hull_cruiser }
+		}
+		history = yes
+		target_variant = {
+			match_value = 2000.0
+			
+			type = ship_hull_cruiser_2
+			modules = {
+				fixed_ship_battery_slot = ship_light_medium_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air
+				fixed_ship_fire_control_system_slot = ship_fire_control_system
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				fixed_ship_secondaries_slot = ship_dp_secondaries
+				front_1_custom_slot = ship_light_medium_battery_2
+				mid_1_custom_slot = ship_light_medium_battery_2
+				mid_2_custom_slot = ship_light_medium_battery_2
+				rear_1_custom_slot = ship_light_medium_battery_2
+			}
+		}
+		
+		allowed_modules = {
+			ship_medium_battery
+			ship_anti_air
+			ship_dp_secondaries
+			ship_torpedo
+			ship_depth_charge
+			ship_fire_control_system
+			cruiser_ship_engine
+			ship_radar
+			ship_sonar
+			ship_airplane_launcher
+			
+		}
+	}
+}

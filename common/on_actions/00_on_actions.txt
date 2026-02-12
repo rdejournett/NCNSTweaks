@@ -1,0 +1,11 @@
+
+on_actions = {
+    on_startup = {
+        effect = {
+            # Move from Global scope to Italy's scope
+            ITA = {
+				navy_experience = 100
+            }
+        }
+    }
+}
