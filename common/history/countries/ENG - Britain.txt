@@ -1,4 +1,0 @@
-# Inside the ENG history file
-add_ideas = {
-    ENG_naval_intelligence_superiority
-}

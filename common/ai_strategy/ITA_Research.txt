@@ -154,18 +154,6 @@ ITA_aggressive_strike_force = {
 	
 }
 
-# set home bases hopefully
-ITA_med_home_base = {
-    allowed = { tag = ITA }
-	enable = { controls_province = 7059 } # Sicily
-	abort = { always = no }
-	ai_strategy = {
-		type = strike_force_home_base
-		id = 169      # Strategic reagion id (west coast of italy)
-		value = 1000   # The weight/importance of using this base
-	}
-}
-
 
 # boost the med
 
@@ -179,7 +167,7 @@ ITA_develop_mediterranean_supremacy = {
 			has_war_with = ENG
 			has_war_with = USA
 		}
-		date > 1940.1.1
+		date > 1936.1.1
 	}
 	
 	abort_when_not_enabled = yes
@@ -197,23 +185,6 @@ ITA_develop_mediterranean_supremacy = {
 	}
 }
 
-
-ITA_exercise_early = {
-	allowed = { tag = ITA }
-	enable = { 
-		has_war = no 
-		date < 1939.1.1
-	}
-	abort_when_not_enabled = yes
-	# Tells the AI that the 'Danger' of running out of fuel 
-	# or equipment during training is acceptable.
-	ai_strategy = {
-		type = naval_mission_threshold
-		id = MISSION_TRAINING
-		value = -1.0
-	}
-	
-}
 
 ITA_build_convoys = {
 	allowed = {
@@ -235,6 +206,59 @@ ITA_build_convoys = {
 		value = 1
 	}
 }
+
+
+
+#overwrites the wierd thing about the med
+# extra scaryness around italy, this together with sufficient enemy superiority will make ai avoid transports around its coast
+ITA_be_careful_transporting_through_the_med = {
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		date < 1942.1.1
+		has_war = yes
+		enemies_naval_strength_ratio > 1
+	}
+	abort = {
+		OR = {
+			date > 1942.1.1
+			has_war = no
+			enemies_naval_strength_ratio < 1
+		}
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 68
+		value = -100
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 169
+		value = -100
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 29
+		value = -100
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 168
+		value = -100
+	}
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 69
+		value = -100
+	}
+}
+
 
 
 # these are the possibilities

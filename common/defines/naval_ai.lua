@@ -15,3 +15,13 @@ NDefines.NAI.MIN_REASONABLE_TASKFORCE_SIZE = 1 -- AI is allowed to make 1-ship g
 -- Lowering this makes the AI "deathstack" its capitals even if it's short on destroyers
 NDefines.NNavy.COMBAT_RETREAT_DECISION_CHANCE = 0.05 							-- There is also random factor in deciding if we should retreat or not. That causes a delay in taking decision, that sooner or later will be picked. It's needed so damaged fast ships won't troll the combat.
 NDefines.NNavy.AGGRESION_MULTIPLIER_FOR_COMBAT = 12
+NDefines.NNavy.AGGRESSION_SETTINGS_VALUES = {
+    0,      -- Never
+    2,    -- Low (Very cautious)
+    4,    -- Medium (Standard)
+    6,    -- High (Aggressive)
+    10000       -- Always (Death before dishonor)
+}
+
+
+NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR = 0.05

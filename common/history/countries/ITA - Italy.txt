@@ -1,8 +1,0 @@
-# Forces all starting fleets to start exercising immediately
-# this does not work, but doesn't error out either.  Strange
-every_fleet = {
-	set_naval_mission = training
-}
-
-# Sets the starting Naval XP to 100
-add_experience = { type = navy_experience value = 100 }

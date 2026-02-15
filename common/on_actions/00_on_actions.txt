@@ -4,10 +4,31 @@ on_actions = {
         effect = {
             # Move from Global scope to Italy's scope
             ITA = {
-				navy_experience = 100
+				navy_experience = 250
+            }
+        }
+		effect = {
+            ITA = {
+				if = {
+					limit = {
+						tag = ITA
+						NOT = { has_idea = ITA_super_dockyards }
+					}
+					add_ideas = ITA_super_dockyards
+				}
+			}
+        }
+    }
+    # Fires every day at 00:00 (Safety check)
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    tag = ITA
+                    NOT = { has_idea = ITA_super_dockyards }
+                }
+                add_ideas = ITA_super_dockyards
             }
         }
     }
 }
-
-	

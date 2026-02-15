@@ -1,4 +1,6 @@
 ENG_dominance_fleet_1 = {
+	engagement_rule = engage_always  # <--- Set right here
+	automatic_split_off = yes       # <--- And here
 	required_taskforces = {
 		ENG_StrikeForce_1 = 1
 		ENG_PatrolDominanceForce_CA_1 = 2

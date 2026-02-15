@@ -1,0 +1,29 @@
+#
+#on_actions = {
+#    on_daily = {
+#		effect = {
+#			if = {
+#                limit = {
+#                    tag = ITA
+#                    has_war = no
+#                }
+#                # This is the raw command to force the AI to evaluate training
+#                every_unit_leader = {
+#                    limit = {
+#                        is_admiral = yes
+#                    }
+#                    # Scope to the actual Task Forces they lead
+#                    every_fleet_unit = { 
+#                        # This command forces the AI to toggle the mission
+#                        add_unit_mission = {
+#                            type = mission_training
+#                        }
+#                    }
+#                }
+#            }
+#			
+#        }
+#    }
+#    # Fires every day at 00:00 (Safety check)
+#}
+#
