@@ -1,0 +1,143 @@
+JAP_supply_china = {
+    allowed = { tag = JAP }
+    enable = {
+        has_war_with = CHI
+        controls_state = 603 # Example: Suiyuan (a common supply bottleneck)
+#		452 = {  # Matrouh
+#			any_province_building_level = {
+#				province = {
+#					id = 10061
+#				}
+#				building = supply_node
+#				level < 1
+#			}
+#		}
+    }
+	abort_when_not_enabled = yes
+    # Force AI to build a supply hub in this state
+    ai_strategy = {
+        type = build_building
+        id = supply_node  # Internal name for Supply Hubs
+        target = 605      # The State ID where it should build
+        value = 100       # The weight/priority
+    }
+	ai_strategy = {
+        type = build_building
+        id = supply_node  # Internal name for Supply Hubs
+        target = 603      # The State ID where it should build
+        value = 100       # The weight/priority
+    }
+	ai_strategy = {
+        type = build_building
+        id = supply_node  # Internal name for Supply Hubs
+        target = 249      # The State ID where it should build
+        value = 100       # The weight/priority
+    }	
+}
+
+JAP_puppet_supply_china_1 = {
+    allowed = { tag = RNG }
+    enable = {
+        has_war_with = CHI
+        controls_state = 605 # Example: Suiyuan (a common supply bottleneck)
+    }
+	abort_when_not_enabled = yes
+    # Force AI to build a supply hub in this state
+    ai_strategy = {
+        type = build_building
+        id = supply_node  # Internal name for Supply Hubs
+        target = 605      # The State ID where it should build
+        value = 100       # The weight/priority
+    }
+}
+JAP_puppet_supply_china_2 = {
+    allowed = { tag = RNG }
+    enable = {
+        has_war_with = CHI
+        controls_state = 603 # Example: Suiyuan (a common supply bottleneck)
+    }
+	abort_when_not_enabled = yes
+    # Force AI to build a supply hub in this state
+    ai_strategy = {
+        type = build_building
+        id = supply_node  # Internal name for Supply Hubs
+        target = 603      # The State ID where it should build
+        value = 100       # The weight/priority
+    }
+}
+JAP_puppet_supply_china_3 = {
+    allowed = { tag = RNG }
+    enable = {
+        has_war_with = CHI
+        controls_state = 249 # Example: Suiyuan (a common supply bottleneck)
+    }
+	abort_when_not_enabled = yes
+    # Force AI to build a supply hub in this state
+    ai_strategy = {
+        type = build_building
+        id = supply_node  # Internal name for Supply Hubs
+        target = 249      # The State ID where it should build
+        value = 100       # The weight/priority
+    }
+}
+JAP_puppet_supply_china_3 = {
+    allowed = { tag = RNG }
+    enable = {
+        has_war_with = CHI
+        controls_state = 750 # Example: Suiyuan (a common supply bottleneck)
+    }
+	abort_when_not_enabled = yes
+    # Force AI to build a supply hub in this state
+    ai_strategy = {
+        type = build_building
+        id = supply_node  # Internal name for Supply Hubs
+        target = 750      # The State ID where it should build
+        value = 100       # The weight/priority
+    }
+}
+
+
+
+JAP_Supply_4 = {
+	allowed = { original_tag = JAP }
+	enable = {
+		# NOTE: make sure these conditions are largely the same as for ENG_to_tobruk above
+		is_historical_focus_on = yes
+		#date > 1940.7.1  # slightly earlier than the actual push to give time to build
+		451 = { is_controlled_by = JAP }
+		JAP = { is_ai = yes }
+
+		# Check that we don't already have the building there
+		452 = {  # Matrouh
+			any_province_building_level = {
+				province = {
+					id = 10144  
+				}
+				building = supply_node
+				#building = naval_base
+				level < 1
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		# Improve supply
+		type = build_building
+		id = supply_node
+		#id = naval_base
+		target = 10144  # Marsa Matruh
+		# target = 9989  # Sidi Barrani
+		value = 500
+	}
+}
+
+
+#			619 = {
+#				add_building_construction = {
+#					type = supply_node
+#					level = 1
+#					province = 2015
+#					instant_build = yes
+#				}
+#			}

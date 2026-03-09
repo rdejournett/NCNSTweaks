@@ -657,14 +657,6 @@ add_mastery = {
     amount = 100
     sub_doctrine = defensive_postures
 }
-
-# added by NCNS Tweaks
-set_sub_doctrine = jeune_ecole
-add_mastery = {
-    amount = 100
-    sub_doctrine = jeune_ecole
-}
-
 	
 	complete_special_project = {
 		project = sp:sp_air_radar
@@ -1269,7 +1261,6 @@ if = {
 			mid_2_custom_slot = ship_airplane_launcher_1
 			rear_1_custom_slot = ship_heavy_battery_1
 		}
-		obsolete = yes
 	}
 	### Heavy Cruiser Variants	
 	create_equipment_variant = {
@@ -1436,8 +1427,8 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = light_ship_engine_1
 			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = ship_depth_charge_1
-			rear_1_custom_slot = ship_depth_charge_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
 		}
 		obsolete = yes
 	}
@@ -1473,7 +1464,6 @@ if = {
 			mid_1_custom_slot = empty
 			rear_1_custom_slot = ship_depth_charge_1
 		}
-		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "Aquila Class" 			#Represents the following WWI Aquila-Class Esploratori Leggeri

@@ -6,6 +6,9 @@ on_actions = {
             ITA = {
 				navy_experience = 250
             }
+            JAP = {
+				navy_experience = 250
+            }			
         }
 		effect = {
             ITA = {
