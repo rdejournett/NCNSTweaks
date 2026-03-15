@@ -1,9 +1,9 @@
-ITA_StrikeForce_1 = {
+ITA_StrikeForce_1 = {  #the original files are ai_will_do 1 or 5 so we need to set this higher to ever work
 	allowed = {
 		original_tag = ITA 
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 6
 	}	
 	mission = { naval_strike }
 	min_composition = {
@@ -16,17 +16,20 @@ ITA_StrikeForce_1 = {
 	}
 	
 	optimal_composition = {
+		carrier = {
+			amount = 4
+		}
 		battleship = {
 			amount = 6
 		}
 		heavy_cruiser = {
-			amount = 6
+			amount = 12
 		}
 		light_cruiser = {
-			amount = 8
+			amount = 20
 		}
 		destroyer = {
-			amount = 5
+			amount = 100
 
 		}
 	}
@@ -38,7 +41,7 @@ ITA_PatrolReconForce_1 = {
 		original_tag = ITA
 	}
 	ai_will_do = {
-		factor = 5
+		factor = 10
 	}
 	mission = { naval_patrol }
 	min_composition = {

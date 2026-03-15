@@ -14,7 +14,7 @@ ITA_destroyers = {
 	}
 	
 	priority = {
-		factor = 50
+		factor = 10
 		modifier = {
 			factor = 1
 		}
@@ -38,10 +38,7 @@ ITA_destroyers = {
 			modules = {
 				fixed_ship_battery_slot = dp_light_battery_1
 				fixed_ship_anti_air_slot = empty
-				fixed_ship_fire_control_system_slot = {
-					any_of = { ship_sonar }
-					upgrade > current
-				}
+				fixed_ship_fire_control_system_slot = ship_sonar
 				fixed_ship_radar_slot = {
 					any_of = { ship_radar }
 					upgrade > current
@@ -66,9 +63,9 @@ ITA_destroyers = {
 	}
 	destroyer_1_upgrade = {
 		priority = {
-			factor = 50
+			factor = 20
 			modifier = {
-				factor = 10
+				factor = 2
 				has_war = yes
 			}
 		}
@@ -82,12 +79,9 @@ ITA_destroyers = {
 			
 			type = ship_hull_light_1
 			modules = {
-				fixed_ship_battery_slot = dp_light_battery_1
-				fixed_ship_anti_air_slot = empty
-				fixed_ship_fire_control_system_slot = {
-					any_of = { ship_sonar }
-					upgrade > current
-				}
+				fixed_ship_battery_slot = dp_light_battery
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_sonar
 				fixed_ship_radar_slot = {
 					any_of = { ship_radar }
 					upgrade > current
@@ -120,7 +114,7 @@ ITA_destroyers = {
 			}
 			modifier = { 
 				has_tech = improved_ship_hull_light 
-				factor = 0 #let's not waste XP here
+				factor = 10 #let's not waste XP here
 			}
 		}
 		enable = { not = { has_tech = improved_ship_hull_light } }
@@ -132,11 +126,8 @@ ITA_destroyers = {
 			type = ship_hull_light_2
 			modules = {
 				fixed_ship_battery_slot = dp_light_battery
-				fixed_ship_anti_air_slot = empty
-				fixed_ship_fire_control_system_slot = {
-					any_of = { ship_sonar }
-					upgrade > current
-				}
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_sonar
 				fixed_ship_radar_slot = {
 					any_of = { ship_radar }
 					upgrade > current
@@ -177,11 +168,8 @@ ITA_destroyers = {
 			type = ship_hull_light_2
 			modules = {
 				fixed_ship_battery_slot = dp_light_battery_1
-				fixed_ship_anti_air_slot = empty
-				fixed_ship_fire_control_system_slot = {
-					any_of = { ship_sonar }
-					upgrade > current
-				}
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_sonar
 				fixed_ship_radar_slot = {
 					any_of = { ship_radar }
 					upgrade > current
@@ -208,9 +196,9 @@ ITA_destroyers = {
 	destroyer_3 = {
 	
 		priority = {
-			factor = 5
+			factor = 50
 			modifier = {
-				factor = 1
+				factor = 50
 			}
 		}
 		role_icon_index = 1
@@ -221,14 +209,14 @@ ITA_destroyers = {
 			
 			type = ship_hull_light_2
 			modules = {
-				fixed_ship_battery_slot = ship_light_battery_2
+				fixed_ship_battery_slot = ship_light_battery
 				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
+				fixed_ship_fire_control_system_slot = ship_sonar
+				fixed_ship_radar_slot = ship_radar
 				fixed_ship_engine_slot = light_ship_engine_2
-				fixed_ship_torpedo_slot = ship_torpedo_1
-				mid_1_custom_slot = empty
-				rear_1_custom_slot = ship_depth_charge_1
+				fixed_ship_torpedo_slot = ship_torpedo
+				mid_1_custom_slot = ship_depth_charge
+				rear_1_custom_slot = ship_depth_charge
 			}
 		}
 		
@@ -262,7 +250,7 @@ ITA_destroyers = {
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
 				fixed_ship_anti_air_slot = ship_anti_air
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_fire_control_system_slot = ship_sonar
 				fixed_ship_radar_slot = ship_sonar
 				fixed_ship_engine_slot = light_ship_engine_2
 				fixed_ship_torpedo_slot = ship_torpedo_1
@@ -345,7 +333,7 @@ ITA_naval_light_cruiser = {
 	}
 	
 	priority = {
-		factor = 30
+		factor = 1000
 	}
 	cruiser_light_early = {
 		
@@ -368,9 +356,9 @@ ITA_naval_light_cruiser = {
 				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_2
-				fixed_ship_armor_slot = empty
-				mid_1_custom_slot = ship_torpedo_1
-				mid_2_custom_slot = ship_airplane_launcher_1
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				mid_1_custom_slot = ship_light_medium_battery_2
+				mid_2_custom_slot = ship_light_medium_battery_2
 				rear_1_custom_slot = ship_light_medium_battery_2
 			}
 		}
@@ -498,9 +486,9 @@ ITA_naval_light_cruiser = {
 				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_2
-				fixed_ship_armor_slot = empty
-				front_1_custom_slot = ship_anti_air_1
-				mid_1_custom_slot = ship_torpedo_1
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				front_1_custom_slot = ship_light_medium_battery_2
+				mid_1_custom_slot = ship_light_medium_battery_2
 				mid_2_custom_slot = ship_airplane_launcher_1
 				rear_1_custom_slot = ship_light_medium_battery_2
 			}

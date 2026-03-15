@@ -1,0 +1,31 @@
+﻿############################
+## Italian Events
+############################
+#
+add_namespace = ITA_naval_training
+
+country_event = {
+    id = ITA_naval_training.1
+    title = ITA_naval_training.1.t
+    desc = ITA_naval_training.1.d
+    picture = GFX_report_event_naval_exercise
+
+    is_triggered_only = yes
+    hidden = yes  # no popup, fires silently in background
+
+    trigger = {
+        tag = ITA
+        is_ai = yes
+    }
+
+    immediate = {
+        navy_experience  = 1
+    }
+
+    after = {
+        country_event = {
+            id = ITA_naval_training.1
+            days = 1
+        }
+    }
+}

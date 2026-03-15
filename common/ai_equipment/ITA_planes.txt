@@ -1,0 +1,111 @@
+
+ITA_cv_naval_bomber = {
+	category = air
+
+	#blocked_for = {  ENG USA FRA JAP }
+
+	available_for = {ITA}
+
+	roles = {
+		air_cv_naval_bomber
+	}
+
+	priority = {
+		factor = 500
+		modifier = {
+			has_navy_size = {
+				unit = carrier
+ 	  			size < 1
+			}
+			factor = 10
+		}
+	}
+	cv_naval_bomber_1 = {
+		priority = {
+			factor = 100
+
+		}
+
+		history = yes
+		target_variant = {
+			match_value = 1000
+			type = cv_small_plane_naval_bomber_airframe_1
+			modules = {
+				fixed_main_weapon_slot = nav_bomber_weapon
+				fixed_auxiliary_weapon_slot_1 = empty
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = lmg_defense_turret
+				special_type_slot_2 = empty
+			}
+		}
+
+		allowed_modules = {
+			nav_bomber_weapon
+			engine_2_1x
+			lmg_defense_turret
+		}
+	}
+	cv_naval_bomber_2 = {
+		priority = {
+			factor = 200
+		}
+
+		history = yes
+		target_variant = {
+			match_value = 1500
+			type = cv_small_plane_naval_bomber_airframe_2
+			modules = {
+				fixed_main_weapon_slot = nav_bomber_weapon
+				fixed_auxiliary_weapon_slot_1 = bomb_locks
+				engine_type_slot = { any_of = { engine_3_1x engine_2_1x } }
+				special_type_slot_1 = lmg_defense_turret
+				special_type_slot_2 = empty
+				special_type_slot_3 = self_sealing_fuel_tanks_small
+			}
+
+		}
+
+		allowed_modules = {
+			nav_bomber_weapon
+			bomb_locks
+			engine_3_1x
+			engine_2_1x
+			lmg_defense_turret
+			self_sealing_fuel_tanks_small
+		}
+	}
+
+	cv_naval_bomber_3 = {
+		priority = {
+			factor = 200
+		}
+
+		history = yes
+		target_variant = {
+			match_value = 2000
+			type = cv_small_plane_naval_bomber_airframe_3
+			modules = {
+				fixed_main_weapon_slot = nav_bomber_weapon
+				fixed_auxiliary_weapon_slot_1 = heavy_bomb_locks
+				fixed_auxiliary_weapon_slot_2 = aircraft_cannon_2_2x
+				fixed_auxiliary_weapon_slot_3 = aircraft_cannon_2_2x
+				engine_type_slot = { any_of = { engine_4_1x engine_3_1x } }
+				special_type_slot_1 = empty
+				special_type_slot_2 = empty
+				special_type_slot_3 = self_sealing_fuel_tanks_small
+			}
+
+		}
+
+		allowed_modules = {
+			nav_bomber_weapon
+			heavy_bomb_locks
+			bomb_locks
+			aircraft_cannon_2_2x
+			engine_4_1x
+			engine_3_1x
+			lmg_defense_turret
+			self_sealing_fuel_tanks_small
+		}
+	}
+}

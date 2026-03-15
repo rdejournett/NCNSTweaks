@@ -19,11 +19,19 @@ on_actions = {
 					}
 					add_ideas = ITA_super_dockyards
 				}
+				
+				add_dynamic_modifier = {
+					modifier = ITA_navy_modifier
+					scope = ITA
+				}
+
 			}
         }
     }
-    # Fires every day at 00:00 (Safety check)
-    on_daily = {
+
+	
+    # Fires every month at 00:00 (Safety check)
+    on_monthly = {
         effect = {
             if = {
                 limit = {
@@ -34,4 +42,6 @@ on_actions = {
             }
         }
     }
+
+	
 }

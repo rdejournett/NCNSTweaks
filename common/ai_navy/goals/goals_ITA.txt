@@ -71,8 +71,8 @@ ITA_naval_dominance = {
         ITA
     }
 
-    min_priority = 1
-    max_priority = 8
+    min_priority = 10
+    max_priority = 40
 }
 
 ITA_mine_laying = {
