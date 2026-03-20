@@ -491,6 +491,20 @@ if = {
 	give_guarantee = ALB
 }
 
+#############################################################
+
+
+#NCNS Tweaks
+############################################################
+
+add_equipment_to_stockpile = {
+	type = cv_small_plane_naval_bomber_airframe_1
+	amount = 190
+	producer = ITA
+	variant_name = "ITA Torp Bomber 1"
+}
+
+
 1939.1.1 = {
 
 	add_political_power = 1198
@@ -1047,6 +1061,29 @@ if = {
 		icon = "GFX_ITA_CAS1_medium"
 	}
 
+
+	create_equipment_variant = {
+		name = "NCNS Tweaks CV Nav Bomber" #
+		type = cv_small_plane_naval_bomber_airframe_1
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_ITA_naval_bomber1_medium"
+	}
+	
+#	create_equipment_variant = {
+#		name = "Blackburn Shark" 
+#		type = cv_small_plane_naval_bomber_airframe_0
+#		design_team = mio:ENG_fairey_aviation_organization
+#		modules = {
+#			fixed_main_weapon_slot = torpedo_mounting
+#			engine_type_slot = engine_1_1x
+#			special_type_slot_1 = empty
+#		}
+#		icon = "GFX_ENG_naval_bomber1_medium"
+#	}
 }
 
 #TANKS
@@ -1785,3 +1822,4 @@ if = {
 	set_global_flag = MTG_second_london_conference
 	set_global_flag = { flag = MTG_naval_treaty_signatories value = 5 }
 }
+

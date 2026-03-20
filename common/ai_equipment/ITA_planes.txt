@@ -1,4 +1,5 @@
 
+
 ITA_cv_naval_bomber = {
 	category = air
 
@@ -15,7 +16,7 @@ ITA_cv_naval_bomber = {
 		modifier = {
 			has_navy_size = {
 				unit = carrier
- 	  			size < 1
+ 	  			size > 1
 			}
 			factor = 10
 		}

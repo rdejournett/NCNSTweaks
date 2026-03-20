@@ -26,6 +26,21 @@ on_actions = {
 				}
 
 			}
+            JAP = {
+				if = {
+					limit = {
+						tag = JAP
+						NOT = { has_idea = JAP_super_dockyards }
+					}
+					add_ideas = JAP_super_dockyards
+				}
+				
+				add_dynamic_modifier = {
+					modifier = JAP_navy_modifier
+					scope = JAP
+				}
+
+			}
         }
     }
 
@@ -43,5 +58,29 @@ on_actions = {
         }
     }
 
+
 	
 }
+
+
+
+
+## for debugging
+#
+#	on_daily = {
+#		effect = {
+#			# Change this to your specific testing date
+#			if = {
+#				limit = {
+#					date > 1936.2.1
+#				}
+#				# Ensure it only fires once
+#				#unless = { has_global_flag = target_date_reached }
+#				
+#				set_global_flag = target_date_reached
+#				root = { country_event = { id = debug_pause.1 } }
+#				pause_game = yes
+#			}
+#		}
+#	}
+#	

@@ -1,0 +1,17 @@
+#add_namespace = debug_pause
+#
+## Event to pause the game on a specific date
+#country_event = {
+#	id = debug_pause.1
+#	title = "Debug: Target Date Reached"
+#	desc = "The game has reached the specified testing date."
+#	picture = GFX_report_event_generic_sign_treaty
+#
+#	is_triggered_only = yes
+#	hidden = no # Set to 'yes' if you just want the pause without the popup
+#
+#	option = {
+#		name = "Understood"
+#		# The game naturally pauses when a country event pops up
+#	}
+#}

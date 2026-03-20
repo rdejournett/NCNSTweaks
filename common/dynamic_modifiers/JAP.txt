@@ -1,0 +1,7 @@
+JAP_navy_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_CHL_armada_de_chile
+
+	experience_gain_navy = 1
+}

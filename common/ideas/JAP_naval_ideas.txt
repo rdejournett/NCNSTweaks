@@ -9,11 +9,11 @@ ideas = {
             }
 			picture = generic_navy_bonus
             modifier = {
-                production_speed_dockyard_factor = 2.0 # 200% increase (Base is 1.0)
+                production_speed_dockyard_factor = 3.0 # 200% increase (Base is 1.0)
+				refit_speed = 5 # 500%  was 0.15 ie 15%
+				repair_speed_factor = 5
+				industrial_capacity_dockyard = 3.0  # dockyard processing speed
             }
-			modifier = {
-				industrial_capacity_dockyard = 2.0  # dockyard processing speed
-			}
         }
     }
 }

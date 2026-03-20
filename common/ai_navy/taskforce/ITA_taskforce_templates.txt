@@ -7,10 +7,19 @@ ITA_StrikeForce_1 = {  #the original files are ai_will_do 1 or 5 so we need to s
 	}	
 	mission = { naval_strike }
 	min_composition = {
+		carrier = {
+			amount = 1
+		}
 		battleship = {
 			amount = 1
 		}
 		heavy_cruiser = {
+			amount = 0
+		}
+		light_cruiser = {
+			amount = 1
+		}
+		destroyer = {
 			amount = 1
 		}
 	}
