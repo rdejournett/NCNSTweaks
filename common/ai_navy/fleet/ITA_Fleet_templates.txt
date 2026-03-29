@@ -4,9 +4,9 @@ ITA_dominance_fleet_1 = {
 		ITA_PatrolReconForce_1 = 2
 	}
 	optional_taskforces = {
-		ITA_StrikeForce_1 = 2
-		ITA_PatrolReconForce_1 = 10
-	}	
+		ITA_StrikeForce_1 = 1
+		ITA_PatrolReconForce_1 = 2
+	}
 }
 ITA_raiding_fleet_2 = {
 

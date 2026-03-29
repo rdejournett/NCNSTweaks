@@ -1,0 +1,112 @@
+
+JAP_home_guard_2 = { #we are being invaded help help
+	allowed = { original_tag = JAP }
+	enable = {
+		surrender_progress > 0
+	}
+
+	ai_strategy = {
+	    type = front_control
+	    state_trigger = {
+	        is_core_of = JAP
+	    }
+	    area = home_islands
+	    priority = 250
+	    ratio = 0
+	    ordertype = front
+	    execution_type = rush
+	    execute_order = yes
+	    manual_attack = yes
+	}
+
+	ai_strategy = { #closest sea zones
+	    type = put_unit_buffers
+	    ratio = 0
+	    states = {
+			526 #okinawa
+			1018
+			528
+			530
+			529
+			1020
+			551
+			532
+			535
+			534
+			282
+			# there are others but meh
+	    }
+	    subtract_fronts_from_need = yes
+		subtract_fronts_from_need = yes
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = home_islands
+		value = 60
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		area = home_islands
+		value = 1000
+	}
+
+	ai_strategy = {
+	    type = front_unit_request
+	    state_trigger = {
+	        is_core_of = JAP
+	    }
+	    area = home_islands
+	    value = 1000
+	}
+
+
+
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 126
+		value = 4
+	}
+
+	abort_when_not_enabled = yes
+
+}
+
+
+
+
+JAP_home_guard = {
+	allowed = { original_tag = JAP }
+	enable = {
+		any_enemy_country = {
+			OR = {
+				controls_state = 528
+				controls_state = 526
+			}
+		}
+		surrender_progress < 0.01
+	}
+
+	ai_strategy = {
+		type = garrison
+		value = 200
+	}
+
+
+
+	ai_strategy = { #closest sea zones
+	    type = put_unit_buffers
+	    ratio = 0.25
+	    states = {
+			528
+			526
+			529
+	    }
+	    subtract_fronts_from_need = no
+		subtract_invasions_from_need = yes
+	}
+
+	abort_when_not_enabled = yes
+
+}
