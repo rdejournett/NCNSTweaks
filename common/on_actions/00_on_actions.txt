@@ -41,6 +41,16 @@ on_actions = {
 				}
 
 			}
+            GER = {
+				if = {
+					limit = {
+						tag = GER
+						NOT = { has_idea = GER_super_dockyards }
+					}
+					add_ideas = GER_super_dockyards
+				}
+				
+			}			
         }
     }
 

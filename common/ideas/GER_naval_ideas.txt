@@ -1,0 +1,20 @@
+ideas = {
+    country = {
+        GER_super_dockyards = {
+            allowed = { tag = GER }
+            visible = { always = yes } # Keeps not it hidden from the UI
+            
+			available = {
+                always = yes
+            }
+			picture = generic_navy_bonus
+            modifier = {
+                production_speed_dockyard_factor = 2 # 200% increase (Base is 1.0)
+            }
+			modifier = {
+				industrial_capacity_dockyard = 10 # dockyard processing speed
+			}			
+			
+        }
+    }
+}

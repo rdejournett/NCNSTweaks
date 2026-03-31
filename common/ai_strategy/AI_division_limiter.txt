@@ -22,7 +22,7 @@ division_limiter = {
 				has_war = yes
 			}
 			multiply_temp_variable = {
-				upper_limit = 1.2
+				upper_limit = 2
 			}
 		}
 		if = {
@@ -30,7 +30,7 @@ division_limiter = {
 				is_major = yes
 			}
 			multiply_temp_variable = {
-				upper_limit = 1.15
+				upper_limit = 2
 			}
 		}
 		if = {

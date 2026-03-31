@@ -1,56 +1,88 @@
-ENG_clear_naval_priorities = {
-	allowed = {
-		tag = GER
-	}
-	# Fixes the 'missing enable' error
-	enable = {
-		always = yes
-	}
 
-	# Fixes the 'missing abort' error
-	abort = {
-		always = no
-	}
-	# This multiplier scales the AI's "natural" desire for these missions.
-	# Setting it to 0.0 effectively "mutes" the AI's autonomy for these tasks.
 
-	ai_strategy = {
-	    type = naval_mission_threshold
-	    id = MISSION_PATROL
-	    value = -100
-	}	
+
+
+GER_med_convoy_raiding_west = {
+    allowed = { tag = GER }
+    enable = { has_war = yes }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = naval_convoy_raid_region
+        id = 68 # Western Mediterranean
+        value = 2000 
+    }
+}
+
+GER_med_convoy_raiding_central = {
+    allowed = { tag = GER }
+    enable = { has_war = yes }
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = naval_convoy_raid_region
+        id = 29 # Central Mediterranean
+        value = 2000
+    }
 }
 
 
 
-GER_promote_home_naval_zones = {
-	allowed = {
-		tag = GER
-	}
-	
+#Yo-ho-ho and a bottle of rum! We set sail for the North Sea aaaargh!
+GER_raid_the_north_sea = {
+	allowed = { original_tag = GER }
 	enable = {
-		has_war = yes
+		OR = {
+			has_war_with = NOR
+			has_war_with = SOV
+		}
 	}
 	abort_when_not_enabled = yes
-	
-	# High Priority for Home Waters
-	#ai_strategy = {
-	#	type = naval_convoy_raid_region
-#		id = 18 # English Channel (You can find IDs in map/strategicregions)
-	#	value = 1000
-	#}
+
 	ai_strategy = {
 		type = naval_convoy_raid_region
-		id = 43 # western approaches
-		value = 1000
+		id = 45 #Norwegian Sea
+		value = 10
 	}
 	ai_strategy = {
-    	type = strike_force_home_base
-    	id = 173 # north sea - north coast of germany
-    	value = 1000
+		type = naval_convoy_raid_region
+		id = 174 #Norwegian coast
+		value = 10
 	}
-	
-	
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 173 #Eastern North Sea
+		value = 10
+	}
+}
 
+#overwrites existing in ger.txt
+#Yo-ho-ho and a bottle of rum! We set sail for the North Atlantic aaaargh!
+GER_raid_the_atlantic = {
+	allowed = { original_tag = GER }
+	enable = {
+		OR = {
+			has_war_with = ENG
+			has_war_with = USA
+			has_war_with = CAN
+		}
+		#Gotta control the Western coast of France
+		any_controlled_state = {
+			OR = {
+				state = 14
+				state = 30
+				state = 23
+				state = 19
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 68 # west med
+		value = 250
+	}
 
 }
