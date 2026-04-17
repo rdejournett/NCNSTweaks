@@ -1,110 +1,5 @@
 
 
-ALL_reduce_land_priority_guns_2 = {
-    allowed = {
-		original_tag = ITA
-	}
-    
-    # Correct trigger for equipment amount
-    enable = {
-        has_equipment = {
-            infantry_equipment > 20000
-        }
-    }
-    
-    # Added to stop the "missing abort" error
-    abort = {
-        NOT = {
-            has_equipment = {
-                infantry_equipment > 1000
-            }
-        }
-    }
-
-	
-    ai_strategy = {
-        type = equipment_production_factor
-        id = infantry
-        value = -1
-    }
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 0
-	}
-}
-
-
-ALL_reduce_land_priority_arty = {
-    allowed = {
-		original_tag = ITA
-	}
-    
-    # Correct trigger for equipment amount
-    enable = {
-        has_equipment = {
-            artillery_equipment > 1000
-        }
-    }
-    
-    # Added to stop the "missing abort" error
-    abort = {
-        NOT = {
-            has_equipment = {
-                artillery_equipment > 1000
-            }
-        }
-    }
-
-    ai_strategy = {
-        type = equipment_production_factor
-        id = artillery
-        value = -1
-    }
-	ai_strategy = {
-		type = role_ratio
-		id = artillery
-		value = 0
-	}
-
-}
-
-
-
-ALL_reduce_land_priority_support = {
-    allowed = {
-		original_tag = ITA
-	}
-    
-    # Correct trigger for equipment amount
-    enable = {
-        has_equipment = {
-            support_equipment > 2000
-        }
-    }
-    
-    # Added to stop the "missing abort" error
-    abort = {
-        NOT = {
-            has_equipment = {
-                support_equipment > 1000
-            }
-        }
-    }
-
-	ai_strategy = {
-        type = equipment_production_factor
-        id = support
-        value = -1
-    }
-	ai_strategy = {
-		type = role_ratio
-		id = support
-		value = 0
-	}
-	
-}
-
 
 
 ##### globals
@@ -114,6 +9,7 @@ ALL_reduce_land_priority_support = {
 GLOBAL_stop_infantry = {
     allowed = { is_ai = yes }
     enable = {
+		date > 1945.1.1
         has_equipment = { infantry_equipment > 50000 }
     }
     abort_when_not_enabled = yes
@@ -124,6 +20,7 @@ GLOBAL_stop_infantry = {
 GLOBAL_stop_support = {
     allowed = { is_ai = yes }
     enable = {
+		date > 1945.1.1
         has_equipment = { support_equipment > 5000 }
     }
     abort_when_not_enabled = yes
@@ -134,6 +31,7 @@ GLOBAL_stop_support = {
 GLOBAL_stop_tanks = {
     allowed = { is_ai = yes }
     enable = {
+		date > 1945.1.1
         OR = {
             has_equipment = { light_tank_chassis > 1000 }
 			has_equipment = { medium_tank_chassis > 1000 }
@@ -147,19 +45,4 @@ GLOBAL_stop_tanks = {
 }
 
 
-GLOBAL_stop_air = {
-    allowed = { is_ai = yes }
-    enable = {
-		OR = {
-            has_equipment = { small_plane_airframe > 1000 }
-			has_equipment = { medium_plane_airframe > 1000 }
-        }
-    }
-    abort_when_not_enabled = yes
-    ai_strategy = { type = equipment_production_factor id = fighter value = 0.1 }
-    ai_strategy = { type = equipment_production_factor id = interceptor value = 0.1 }
-	ai_strategy = { type = equipment_production_factor id = cas value = 0.1 }
-	ai_strategy = { type = equipment_production_factor id = naval_bomber value = 0.1 }
-	
-}
 

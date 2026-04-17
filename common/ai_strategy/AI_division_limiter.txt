@@ -9,10 +9,15 @@
 ###If your mod adds new unit types, make sure to add them in as well
 
 division_limiter = {
+	
+	allowed = {
+		is_ai = yes
+	}
 	enable = {
+		is_major = no   # This ensures the limiter only activates for Minors
+		
 		set_temp_variable = {
 			upper_limit = num_of_factories
-			#upper_limit = 0
 		}
 		multiply_temp_variable = {
 			upper_limit = 1.15
@@ -27,33 +32,14 @@ division_limiter = {
 		}
 		if = {
 			limit = {
-				is_major = yes
-			}
-			multiply_temp_variable = {
-				upper_limit = 5
-			}
-		}
-		if = {
-			limit = {
 				threat > 0.75
 			}
 			multiply_temp_variable = {
 				upper_limit = 1.05
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					tag = SOV
-					tag = USA
-					tag = JAP
-					tag = GER					
-				}
-			}
-			multiply_temp_variable = {
-				upper_limit = 20
-			}
-		}		
+		
+		# The check to see if the AI has exceeded its allowed limit
 		check_variable = {
 			num_divisions > upper_limit
 		}
