@@ -85,7 +85,7 @@ JAP_home_guard = {
 				controls_state = 526
 			}
 		}
-		surrender_progress < 0.01
+		surrender_progress > 0.01
 	}
 
 	ai_strategy = {
@@ -109,4 +109,48 @@ JAP_home_guard = {
 
 	abort_when_not_enabled = yes
 
+}
+
+JAP_home_guard_three = { # AI slop
+    allowed = { original_tag = JAP }
+    enable = {
+        # Triggers if Japan has started to lose or if key islands are taken
+        OR = {
+            surrender_progress > 0.05
+            any_enemy_country = {
+                OR = {
+                    controls_state = 528 # Okinawa
+                    controls_state = 526 # Iwo Jima
+                }
+            }
+        }
+        has_capitulated = no
+    }
+
+    # You need a separate block for each specific state you want to prioritize
+    ai_strategy = {
+        type = garrison
+        id = 528 # Okinawa
+        value = 500 # High value to pull units from the mainland
+    }
+
+    ai_strategy = {
+        type = garrison
+        id = 526 # Iwo Jima
+        value = 500
+    }
+
+    ai_strategy = {
+        type = put_unit_buffers
+        ratio = 0.50 # Increased to 50% of available reserves
+        states = {
+            528 # Okinawa
+            526 # Iwo Jima
+            529 # Kyushu
+        }
+        subtract_fronts_from_need = no
+        subtract_invasions_from_need = yes
+    }
+
+    abort_when_not_enabled = yes
 }

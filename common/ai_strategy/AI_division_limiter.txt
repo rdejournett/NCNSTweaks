@@ -30,7 +30,7 @@ division_limiter = {
 				is_major = yes
 			}
 			multiply_temp_variable = {
-				upper_limit = 2
+				upper_limit = 5
 			}
 		}
 		if = {
@@ -41,6 +41,19 @@ division_limiter = {
 				upper_limit = 1.05
 			}
 		}
+		if = {
+			limit = {
+				OR = {
+					tag = SOV
+					tag = USA
+					tag = JAP
+					tag = GER					
+				}
+			}
+			multiply_temp_variable = {
+				upper_limit = 20
+			}
+		}		
 		check_variable = {
 			num_divisions > upper_limit
 		}

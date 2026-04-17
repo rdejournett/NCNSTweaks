@@ -1,16 +1,11 @@
 
 
-ENG_change_ship_priority = {
+GER_change_ship_priority = {
 
-	# Fixes the 'missing enable' error
-	enable = {
-		always = yes
-	}
+    allowed = { tag = GER }
+    enable = { always = yes }
+    abort = { always = no }
 
-	# Fixes the 'missing abort' error
-	abort = {
-		always = no
-	}
 	
 	#never build heavies
 	ai_strategy = {
@@ -46,18 +41,7 @@ ENG_change_ship_priority = {
 		value = -50
 	}
 	
-	# force creation of subs
-	
-	ai_strategy = {
-        type = equipment_production_factor
-        id = submarine
-        value = 500
-    }
-	ai_strategy = {
-		type = role_ratio
-		id = naval_sub
-		value = 500
-	}
+
 	# 2. Map the hulls specifically to those roles (Fixes "No Matching Role")
 	
 	ai_strategy = {
@@ -71,8 +55,8 @@ ENG_change_ship_priority = {
 
 #disable miner production
 
-ENG_stop_mining_production = {
-    allowed = { tag = ENG }
+GER_stop_mining_production = {
+    allowed = { tag = GER }
     enable = { always = yes }
     abort = { always = no }
 
@@ -90,7 +74,7 @@ ENG_stop_mining_production = {
 }
 
 
-# improve DD research tech
+# improve sub research tech
 
 
 GER_improve_sub_upgrade = {
@@ -121,13 +105,7 @@ GER_build_convoys = {
 		original_tag = GER
 	}
 	
-	enable = {
-		OR = {
-			has_war_with = ENG
-			has_war_with = USA
-		}
-		date > 1940.1.1
-	}
+	enable = { always = yes }
 	
 	abort_when_not_enabled = yes
 	
@@ -136,6 +114,54 @@ GER_build_convoys = {
 		id = convoy
 		value = 1
 	}
+	ai_strategy = {
+        type = equipment_production_factor
+        id = convoy
+        value = 100
+    }
+	
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = train
+		value = 1
+	}	
+
+	ai_strategy = {
+        type = equipment_production_factor
+        id = train
+        value = 100
+    }	
+
 }
 
 
+GER_build_subs = {
+	allowed = {
+		original_tag = GER
+	}
+	
+	enable = { always = yes }
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = submarine
+		value = 1
+	}
+	# force creation of subs
+	
+
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 50
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 100 # it's very strange but this is what is in the base game.  why negative?
+	}	
+}

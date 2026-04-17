@@ -1,0 +1,113 @@
+
+infantry_generic = {
+
+	blocked_for = {
+		SIA
+	}
+
+	role = infantry
+	
+	upgrade_prio = {
+		base = 5
+	}
+	
+	infantry_early = {
+	
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 2
+			}
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+			}
+			
+			regiments = {
+				infantry = 9
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = infantry_improved
+		target_min_match = 0.9
+	}
+
+	infantry_improved = {
+
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 3
+				date > 1940.1.1
+			}
+		}
+		
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				anti_air = 1
+				anti_tank = 1
+				rocket_artillery = 1
+			}
+			
+			regiments = {
+				infantry = 9
+				artillery_brigade = 1
+			}
+		}
+	}
+}
+
+better_mountaineers = {
+
+	blocked_for = {
+		SIA
+	}
+
+	role = mountaineers
+	
+	upgrade_prio = {
+		base = 20
+
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = tech_mountaineers
+			}
+		}
+	}
+
+	mountaineers_default = {
+	
+		upgrade_prio = {
+			base = 10
+
+			modifier = {
+				factor = 10
+			}
+		}
+
+		target_template = {
+			
+			support = {
+				engineer = 1
+				artillery = 1
+				anti_air = 1
+			}
+			
+			regiments = {
+				mountaineers = 12
+				artillery_brigade = 1
+			}
+		}
+	}
+}

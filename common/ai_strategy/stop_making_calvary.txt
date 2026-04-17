@@ -1,0 +1,29 @@
+stop_paratrooper_production = {
+ 	allowed = {
+		always = yes
+	}
+	
+	enable = { always = yes }
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = cavalry
+		value = -100 # A high negative value overrides the base desire
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+	
+}
+

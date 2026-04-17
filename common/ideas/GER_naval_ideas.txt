@@ -12,7 +12,7 @@ ideas = {
                 production_speed_dockyard_factor = 2 # 200% increase (Base is 1.0)
             }
 			modifier = {
-				industrial_capacity_dockyard = 10 # dockyard processing speed
+				industrial_capacity_dockyard = 2 # dockyard processing speed
 			}			
 			
         }
