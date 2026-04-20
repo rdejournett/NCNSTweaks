@@ -10,15 +10,6 @@ JAP_KidoButai_1 = {
 		carrier = {
 			amount = 2
 		}
-		battle_cruiser = {
-			amount = 2
-		}
-		battleship = {
-			amount = 2
-		}
-		light_cruiser = {
-			amount = 2
-		}
 		destroyer = {
 			amount = 10
 
@@ -29,11 +20,14 @@ JAP_KidoButai_1 = {
 			amount = 4
 		}
 		battle_cruiser = {
-			amount = 4
+			amount = 10
 		}
 		battleship = {
-			amount = 4
+			amount = 10
 		}
+		heavy_cruiser = {
+			amount = 10
+		}		
 		light_cruiser = {
 			amount = 10
 		}

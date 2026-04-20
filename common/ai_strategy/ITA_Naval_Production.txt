@@ -38,7 +38,18 @@ ITA_change_ship_priority = {
 		id = naval_screen
 		value = 100
 	}
-
+	
+#	ai_strategy = {
+#		type = equipment_production_factor
+#		id = naval_screen
+#		value = 100
+#	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 1000
+	}
 }
 
 
